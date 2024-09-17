@@ -77,12 +77,12 @@ for model in model_list:
     mbpp_scores = [round(all_correct[model]['mbpp'][i], 2) for i in range(4)]
     apps_scores = [round(all_correct[model]['apps'][i], 2) for i in range(4)]
     
-    max_humaneval_1 = max(humaneval_scores[0:2])  # 前两个选最大
-    max_humaneval_2 = max(humaneval_scores[2:4])  # 后两个选最大
-    max_mbpp_1 = max(mbpp_scores[0:2])  # 前两个选最大
-    max_mbpp_2 = max(mbpp_scores[2:4])  # 后两个选最大
-    max_apps_1 = max(apps_scores[0:2])  # 前两个选最大
-    max_apps_2 = max(apps_scores[2:4])  # 后两个选最大
+    max_humaneval_1 = max(humaneval_scores[0:2])  
+    max_humaneval_2 = max(humaneval_scores[2:4])  
+    max_mbpp_1 = max(mbpp_scores[0:2])  
+    max_mbpp_2 = max(mbpp_scores[2:4])  
+    max_apps_1 = max(apps_scores[0:2])  
+    max_apps_2 = max(apps_scores[2:4])  
     
     humaneval_str = ' & '.join([f'\\textbf{{{score:.2f}}}' if score == max_humaneval_1 else str(score) for score in humaneval_scores[0:2]] + [f'\\textbf{{{score:.2f}}}' if score == max_humaneval_2 else str(score) for score in humaneval_scores[2:4]])
     mbpp_str = ' & '.join([f'\\textbf{{{score:.2f}}}' if score == max_mbpp_1 else str(score) for score in mbpp_scores[0:2]] + [f'\\textbf{{{score:.2f}}}' if score == max_mbpp_2 else str(score) for score in mbpp_scores[2:4]])
