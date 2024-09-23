@@ -32,3 +32,10 @@ python rqxx[a/b].py
 to get each RQ's results.
 
 For RQ4, we need to go to the pyter folder and then conduct experiments based on its environments.
+
+To get RQ4 results, we run:
+
+```python
+cd pyter
+bash run_pyter.sh
+```
